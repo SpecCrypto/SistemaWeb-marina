@@ -1,0 +1,303 @@
+:root {
+    --azul-marino: #002366;
+    --azul-armada: #005B96;
+    --azul-oceano: #0077BE;
+    --blanco-naval: #FFFFFF;
+    --dorado-naval: #D4AF37;
+    --gris-acorazado: #5A6A7E;
+    --rojo-faro: #C8102E;
+    --verde-exito: #28a745;
+    --verde-exito-oscuro: #1e7e34;
+    --amarillo-oscuro: #e0a800;
+    --rojo-oscuro: #bd2130;
+    --gris-claro: #f2f6fa;
+    --gris-medio: #ccc;
+    --gris-oscuro: #333;
+    --gris-hover: #f1f1f1;
+}
+
+/* Fuente general y reset básico */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+}
+
+/* Estilos del header */
+.main-header {
+    background-color: var(--azul-marino);
+    color: var(--blanco-naval);
+    padding: 20px 0;
+    border-bottom: 4px solid var(--dorado-naval);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: var(--blanco-naval);
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--blanco-naval);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: var(--blanco-naval);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover {
+    color: var(--dorado-naval);
+    text-decoration: none;
+}
+
+/* Sección de Inventario */
+.inventario-section {
+    padding: 40px 0;
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--blanco-naval);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.section-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--azul-marino);
+    font-size: 28px;
+}
+
+/* Formularios con grid */
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+form input,
+form select {
+    padding: 10px;
+    border: 1px solid var(--gris-medio);
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form select:focus {
+    border-color: var(--azul-oceano);
+    outline: none;
+}
+
+/* Botón principal (Registrar / Actualizar) */
+form button {
+    width: 150px;               /* ancho fijo más pequeño */
+    margin: 0 auto;             /* centra horizontalmente */
+    display: block;             /* para que margin:auto funcione */
+    padding: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--azul-armada);
+}
+
+/* Botón exportar */
+.export-button {
+    display: block;          /* bloque para que tome su línea y se centre */
+    width: 150px;            /* mismo ancho que el botón principal */
+    margin: 10px auto 0;     /* centrado horizontal con un pequeño margen arriba */
+    padding: 10px 0;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.export-button:hover {
+    background-color: var(--verde-exito-oscuro);
+}
+
+/* Tabla */
+.tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tickets-table th,
+.tickets-table td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--gris-medio);
+}
+
+.tickets-table th {
+    background-color: var(--azul-marino);
+    color: var(--blanco-naval);
+    font-weight: bold;
+}
+
+.tickets-table tr:hover {
+    background-color: var(--gris-hover);
+}
+
+/* Acciones en tabla */
+.tickets-table a {
+    padding: 6px 12px;
+    margin: 0 4px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--blanco-naval);
+    transition: background-color 0.3s;
+}
+
+.tickets-table a[href*="editar"] {
+    background-color: #ffc107; /* amarillo */
+}
+
+.tickets-table a[href*="editar"]:hover {
+    background-color: var(--amarillo-oscuro);
+}
+
+.tickets-table a[href*="eliminar"] {
+    background-color: var(--rojo-faro);
+}
+
+.tickets-table a[href*="eliminar"]:hover {
+    background-color: var(--rojo-oscuro);
+}
+
+/* Estados (ejemplo para uso con clases) */
+.estado {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 13px;
+    color: var(--blanco-naval);
+}
+
+.estado.disponible {
+    background-color: var(--verde-exito);
+}
+
+.estado.agotado {
+    background-color: var(--rojo-faro);
+}
+
+.estado.reservado {
+    background-color: var(--gris-acorazado);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--azul-marino);
+    color: var(--blanco-naval);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    border-top: 4px solid var(--dorado-naval);
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.85em;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    form {
+        grid-template-columns: 1fr !important;
+    }
+
+    .section-container h2 {
+        font-size: 22px;
+    }
+
+    .tickets-table th,
+    .tickets-table td {
+        font-size: 13px;
+    }
+
+    form input,
+    form select {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
