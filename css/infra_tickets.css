@@ -1,0 +1,238 @@
+:root {
+    --azul-marino: #002366;
+    --azul-armada: #005B96;
+    --azul-oceano: #0077BE;
+    --blanco-naval: #FFFFFF;
+    --dorado-naval: #D4AF37;
+    --gris-acorazado: #5A6A7E;
+    --rojo-faro: #C8102E;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--azul-marino), #003366);
+    color: var(--blanco-naval);
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: var(--azul-marino);
+    padding: 20px 0;
+    border-bottom: 4px solid var(--dorado-naval);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo-text h1 {
+    font-size: 24px;
+    color: var(--blanco-naval);
+    margin: 0;
+}
+
+.logo-text p {
+    font-size: 14px;
+    color: var(--blanco-naval);
+    margin: 0;
+}
+
+/* Navegación */
+nav .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: var(--blanco-naval);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+.nav-menu a i {
+    margin-right: 6px;
+}
+
+.nav-menu a:hover,
+.nav-menu .active {
+    color: var(--dorado-naval);
+}
+
+/* Sección de Tickets */
+.tickets-section {
+    padding: 40px 20px;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--blanco-naval);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--azul-marino);
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Formulario de Filtros */
+form.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form.filtros select,
+form.filtros input[type="date"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 200px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+form.filtros button {
+    padding: 12px 18px;
+    background-color: var(--dorado-naval);
+    color: var(--azul-marino);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form.filtros button:hover {
+    background-color: var(--azul-oceano);
+    color: var(--blanco-naval);
+}
+
+/* Tabla */
+.tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.tickets-table th {
+    padding: 12px 10px;
+    border-bottom: 1px solid #003366;
+    text-align: center;
+    color: #f9fafb; /* Ejemplo: azul marino, puedes cambiarlo al color que desees */
+    background-color: #003366; /* Opcional: fondo más claro para distinguir */
+    font-weight: bold;
+}
+
+.tickets-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    color: #000000; /* Mantiene el color negro */
+}
+
+.tickets-table thead {
+    background-color: var(--azul-armada);
+    color: var(--blanco-naval);
+}
+
+.estado {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.estado.pendiente {
+    background-color: var(--rojo-faro);
+    color: var(--blanco-naval);
+}
+
+.estado.validado {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.estado.rechazado {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--azul-marino);
+    padding: 20px 0;
+    color: var(--blanco-naval);
+    text-align: center;
+    border-top: 4px solid var(--dorado-naval);
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    form.filtros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .tickets-table th, .tickets-table td {
+        font-size: 13px;
+    }
+
+    form.filtros select,
+    form.filtros input[type="date"] {
+        width: 90%;
+    }
+}

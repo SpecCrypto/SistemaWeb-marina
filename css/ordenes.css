@@ -1,0 +1,185 @@
+:root {
+    --azul-marino: #002366;
+    --azul-armada: #005B96;
+    --azul-oceano: #002366;
+    --blanco-naval: #FFFFFF;
+    --dorado-naval: #D4AF37;
+    --gris-acorazado: #5A6A7E;
+    --rojo-faro: #C8102E;
+    --verde-exito: #28a745;
+    --verde-exito-oscuro: #1e7e34;
+    --amarillo-oscuro: #e0a800;
+    --rojo-oscuro: #bd2130;
+    --gris-claro: #f2f6fa;
+    --gris-medio: #ccc;
+    --gris-oscuro: #333;
+    --gris-hover: #f1f1f1;
+}
+
+/* General */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+}
+
+/* Header */
+.main-header {
+    background-color: var(--azul-marino);
+    color: var(--blanco-naval);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--dorado-naval);
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--blanco-naval);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: var(--blanco-naval);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu li a:hover {
+    color: var(--dorado-naval);
+}
+
+/* Section */
+.inventario-section {
+    padding: 2rem;
+    background-color: var(--blanco-naval);
+}
+
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-container h2 {
+    margin-bottom: 1rem;
+    color: var(--azul-armada);
+}
+
+/* Formulario */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+form select,
+form input {
+    padding: 0.75rem;
+    border: 1px solid var(--gris-medio);
+    border-radius: 5px;
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+    transition: border 0.3s ease;
+}
+
+form select:focus,
+form input:focus {
+    border-color: var(--azul-armada);
+    outline: none;
+}
+
+/* Botón */
+form button {
+    background-color: var(--verde-exito);
+    color: var(--blanco-naval);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--verde-exito-oscuro);
+}
+
+/* Tabla */
+.tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco-naval);
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.tickets-table th,
+.tickets-table td {
+    padding: 0.75rem;
+    border: 1px solid var(--gris-medio);
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.tickets-table thead {
+    background-color: var(--azul-oceano);
+    color: var(--blanco-naval);
+}
+
+.tickets-table tbody tr:hover {
+    background-color: var(--gris-hover);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--azul-marino);
+    color: var(--blanco-naval);
+    text-align: center;
+    margin-top: auto;
+    padding: 15px 10px;
+}
+
+body {
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+     font-family: Arial, sans-serif;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.85rem;
+}

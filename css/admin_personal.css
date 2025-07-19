@@ -1,0 +1,242 @@
+/* ==============================
+   Variables de colores y fuentes
+   ============================== */
+:root {
+    --azul-marino: #002366;
+    --azul-armada: #005B96;
+    --azul-oceano: #0077BE;
+    --blanco-naval: #FFFFFF;
+    --dorado-naval: #D4AF37;
+    --gris-acorazado: #5A6A7E;
+    --rojo-faro: #C8102E;
+
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==============================
+   Reset y estilos globales
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: #f0f4f8; /* Usando un fondo suave como en tu primer CSS */
+    color: var(--gris-acorazado);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ==============================
+   Encabezado
+   ============================== */
+header {
+    background-color: var(--azul-marino);
+    color: var(--blanco-naval);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--blanco-naval);
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dorado-naval);
+}
+
+/* ==============================
+   Sección principal
+   ============================== */
+main section {
+    background-color: var(--blanco-naval);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 35, 102, 0.1);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+main h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: var(--azul-marino);
+}
+
+/* ==============================
+   Tabla
+   ============================== */
+.tabla-personal {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.tabla-personal thead {
+    background-color: var(--azul-armada);
+    color: var(--blanco-naval);
+    text-transform: uppercase;
+}
+
+.tabla-personal th,
+.tabla-personal td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+.tabla-personal tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-personal tbody tr:hover {
+    background-color: #eef3f9;
+}
+
+/* ==============================
+   Acciones (Editar / Eliminar)
+   ============================== */
+.acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.acciones a {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    color: var(--blanco-naval);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.acciones .editar {
+    background-color: var(--azul-oceano);
+}
+
+.acciones .editar:hover {
+    background-color: var(--azul-armada);
+}
+
+.acciones .eliminar {
+    background-color: var(--rojo-faro);
+}
+
+.acciones .eliminar:hover {
+    background-color: #a60b1b;
+}
+
+/* ==============================
+   Pie de página
+   ============================== */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--gris-acorazado);
+}
+
+/* ==============================
+   Estilos responsivos para móviles
+   ============================== */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 12px 15px;
+    }
+
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 8px 8px 0;
+        font-size: 0.95em;
+    }
+
+    main section {
+        padding: 15px;
+        margin: 0 10px;
+    }
+
+    main h2 {
+        font-size: 1.25em;
+    }
+
+    .tabla-personal {
+        font-size: 0.85em;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .tabla-personal thead {
+        display: none;
+    }
+
+    .tabla-personal tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: var(--blanco-naval);
+        padding: 10px;
+    }
+
+    .tabla-personal td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 10px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+
+    .tabla-personal td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--azul-armada);
+        margin-right: 10px;
+        min-width: 110px;
+        flex-shrink: 0;
+    }
+
+    .acciones {
+        justify-content: flex-start;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .acciones a {
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,42 @@
+.badge {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: white;
+    text-transform: capitalize;
+}
+
+.badge-pendiente {
+    background-color: #f39c12;
+}
+
+.badge-proceso {
+    background-color: #3498db;
+}
+
+.badge-finalizado {
+    background-color: #27ae60;
+}
+
+.estatus-container {
+    padding: 30px;
+    text-align: center;
+}
+
+.estatus-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.estatus-table th, .estatus-table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.no-data {
+    font-style: italic;
+    color: #888;
+}
